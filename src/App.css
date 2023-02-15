@@ -1,38 +1,46 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section {
+  height: 100vh;
+  color: #fff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 30px;
+}
+.s1 {
+  background-color: darkcyan;
+}
+.s2 {
+  background-color: firebrick;
+}
+.s3 {
+  background-color: seagreen;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* aos 애니메이션 */
+.logo {
+  transform: translateY(200%);
+  /* 초기 위치 값을 밖으로 빼내려고 200%로 설정 */
+}
+/* 애니메이션 설정한 것들을 class="aos-init aos-animate" 값이 자동으로 생성된다 (개발자도구에서 볼 수 있음) */
+/* 그래서 바로 .aos-animate를 씀  */
+.logo.aos-animate {
+  transform: translateY(-200%);
+  /* 화면 밖으로 */
 }
